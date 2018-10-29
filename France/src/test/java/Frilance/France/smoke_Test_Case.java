@@ -51,7 +51,7 @@ public class smoke_Test_Case {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30l, TimeUnit.SECONDS);
 		driver.get("https://frilansinternational-fr.staging.ffdev.se/en/"); 
-		driver.findElement(By.linkText("Login")).click();
+		//driver.findElement(By.linkText("Login")).click();
 	}
 
 
