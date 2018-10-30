@@ -69,15 +69,16 @@ public class smoke_Test_Case {
 			WebElement ps=driver.findElement(By.id("password"));
 			ps.sendKeys(Password);
 			ps.submit();
-			//login button click
-			driver.findElement(By.cssSelector("#react-tabs-1 > div > form > div:nth-child(2) > div > button > span")).click();
-			driver.findElement(By.xpath("//a[.='Logout']")).click();
-
+			Thread.sleep(10000);
 			// to match actual and expected
 
-			String actmess=driver.findElement(By.linkText("Logout")).getText();
+			String actmess=driver.findElement(By.cssSelector("#app > div > div:nth-child(1) > header > div > div.right-section > div > a.login.loginBackend.logout")).getText();
 			String expmess="Logout";
 			Assert.assertEquals(actmess, expmess);
+			//logout button click
+			driver.findElement(By.cssSelector("#app > div > div:nth-child(1) > header > div > div.right-section > div > a.login.loginBackend.logout")).click();
+			//driver.findElement(By.xpath("//a[.='Logout']")).click();
+
 		}
 
 
